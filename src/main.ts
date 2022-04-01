@@ -1,1 +1,1 @@
-export { MD2html } from './md2html.js'
+export { GitHubAppToken } from './github-app-token.js'
