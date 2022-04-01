@@ -13,8 +13,9 @@
   },
   "keywords": [
     "gas",
-    "markdown",
-    "html"
+    "github",
+    "token",
+    "jwt"
   ],
   "files": [
     "index.d.ts"
