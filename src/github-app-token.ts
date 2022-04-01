@@ -15,6 +15,10 @@ export namespace GitHubAppToken {
      * @type Private key. PKCS#1(RSA key) is not supported.
      */
     privateKey: string
+    /**
+     * @type GitHub API Base URL(ie. `https://api.github.com`).
+     */
+    apiBaseUrl?: string
   }
   /**
    * Generate the token that is used to fetch an access token, and the API Url to fetch It.
@@ -77,11 +81,14 @@ export function generateFunc(
   Utilities: GoogleAppsScript.Utilities.Utilities,
   opts: GitHubAppToken.GenerateOpts
 ): [string, any] {
-  const api_url = 'https://api.github.com'
+  const apiUrl =
+    typeof opts.apiBaseUrl === 'string' && opts.apiBaseUrl !== ''
+      ? opts.apiBaseUrl
+      : 'https://api.github.com'
   const path = `/app/installations/${opts.installationId}/access_tokens`
   const t = jwtEncode(Utilities, opts.appId, opts.privateKey)
   return [
-    `${api_url}${path}`,
+    `${apiUrl}${path}`,
     {
       method: 'post',
       headers: {

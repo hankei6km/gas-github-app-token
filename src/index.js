@@ -13,6 +13,7 @@
  * @property {string} appId - Application Id.
  * @property {string} installationId - installation Id.
  * @property {string} privateKey - Private key. PKCS#1(RSA key) is not supported.
+ * @property {string} [apiBaseUrl] - GitHub API Base URL(ie. `https://api.github.com`).
  */
 
 /**

@@ -43,4 +43,21 @@ describe('generateFunc()', () => {
       }
     })
   })
+  it('should use passed base url', () => {
+    const utilitiesMock: any = {
+      base64Encode: jest.fn().mockImplementation((a) => `base64Encode:${a}`),
+      computeRsaSha256Signature: jest
+        .fn()
+        .mockImplementation((a) => `computeRsaSha256Signature:${a}`)
+    }
+    const [url] = generateFunc(utilitiesMock, {
+      appId: 'app-id',
+      installationId: 'installation-id',
+      privateKey: 'private-key',
+      apiBaseUrl: 'http://localhost:3000'
+    })
+    expect(url).toEqual(
+      'http://localhost:3000/app/installations/installation-id/access_tokens'
+    )
+  })
 })
