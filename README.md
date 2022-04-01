@@ -87,7 +87,3 @@ $ npm install --save-dev  @hankei6km/gas-github-app-token
 MIT License
 
 Copyright (c) 2022 hankei6km
-
-```
-
-```
