@@ -1,6 +1,6 @@
 {
   "name": "@hankei6km/gas-github-app-token",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Google Apps Script library to support to fetch access token from GitHub App",
   "author": "hankei6km <hankei6km@gmail.com> (https://github.com/hankei6km)",
   "license": "MIT",
