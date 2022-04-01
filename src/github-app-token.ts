@@ -81,14 +81,14 @@ export function generateFunc(
   Utilities: GoogleAppsScript.Utilities.Utilities,
   opts: GitHubAppToken.GenerateOpts
 ): [string, any] {
-  const api_url =
+  const apiUrl =
     typeof opts.apiBaseUrl === 'string' && opts.apiBaseUrl !== ''
       ? opts.apiBaseUrl
       : 'https://api.github.com'
   const path = `/app/installations/${opts.installationId}/access_tokens`
   const t = jwtEncode(Utilities, opts.appId, opts.privateKey)
   return [
-    `${api_url}${path}`,
+    `${apiUrl}${path}`,
     {
       method: 'post',
       headers: {
