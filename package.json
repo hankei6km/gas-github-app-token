@@ -37,7 +37,7 @@
     "posttest:build": "npm run clean:test"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-commonjs": "^23.0.0",
     "@rollup/plugin-node-resolve": "^14.0.0",
     "@rollup/plugin-typescript": "^8.3.1",
     "@types/google-apps-script": "^1.0.45",
