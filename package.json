@@ -39,7 +39,7 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-node-resolve": "^15.0.0",
-    "@rollup/plugin-typescript": "^10.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
     "@types/google-apps-script": "^1.0.45",
     "@types/jest": "^27.4.1",
     "jest": "^27.5.1",
